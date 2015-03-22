@@ -62,4 +62,8 @@ public class DataTabletFragment extends Fragment implements DataAdapter.OnDataIt
     public void onDataItemClicked(Data data) {
         loadDataDetailFragment(data);
     }
+
+    public static DataTabletFragment getInstance() {
+        return new DataTabletFragment();
+    }
 }

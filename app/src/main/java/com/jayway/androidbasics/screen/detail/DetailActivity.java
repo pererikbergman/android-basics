@@ -37,10 +37,7 @@ public class DetailActivity extends ActionBarActivity {
         mDataDetailFragment = (DataDetailFragment) getSupportFragmentManager().findFragmentByTag("tag");
 
         if (mDataDetailFragment == null) {
-            mDataDetailFragment = new DataDetailFragment();
-            Bundle bundle = new Bundle();
-            bundle.putInt(DataDetailFragment.DATA_ID, id);
-            mDataDetailFragment.setArguments(bundle);
+            mDataDetailFragment = DataDetailFragment.getInstance(id);
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, mDataDetailFragment, "tag")

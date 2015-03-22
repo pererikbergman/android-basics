@@ -59,5 +59,7 @@ public class SortByNameFragment extends Fragment {
         mRecyclerView.setAdapter(adapter);
     }
 
-
+    public static SortByNameFragment getInstance() {
+        return new SortByNameFragment();
+    }
 }

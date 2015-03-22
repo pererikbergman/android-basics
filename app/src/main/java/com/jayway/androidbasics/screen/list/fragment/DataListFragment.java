@@ -26,4 +26,8 @@ public class DataListFragment extends Fragment {
         mViewPager = (ViewPager) view.findViewById(R.id.view_pager);
         mViewPager.setAdapter(new DataListAdapter(getChildFragmentManager()));
     }
+
+    public static DataListFragment getInstance() {
+        return new DataListFragment();
+    }
 }

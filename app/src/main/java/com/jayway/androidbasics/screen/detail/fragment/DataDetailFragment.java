@@ -13,7 +13,7 @@ import com.jayway.androidbasics.model.Data;
 
 public class DataDetailFragment extends Fragment {
 
-    public static String DATA_ID = "dataId";
+    private static String DATA_ID = "dataId";
 
     private TextView mName;
     private TextView mValue;
@@ -63,5 +63,14 @@ public class DataDetailFragment extends Fragment {
             mValue.setText(Integer.toString(mData.getValue()));
             mDetails.setText("Details:" + Integer.toString(mData.getValue() / 1000));
         }
+    }
+
+    public static DataDetailFragment getInstance(int id) {
+        DataDetailFragment fragment = new DataDetailFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(DataDetailFragment.DATA_ID, id);
+        fragment.setArguments(bundle);
+
+        return fragment;
     }
 }

@@ -29,7 +29,7 @@ public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataIte
         DataListFragment fragment = (DataListFragment) getChildFragmentManager().findFragmentByTag("tag");
 
         if (fragment == null) {
-            fragment = new DataListFragment();
+            fragment = DataListFragment.getInstance();
             getChildFragmentManager().beginTransaction()
                     .add(R.id.container, fragment, "tag")
                     .commit();
@@ -39,5 +39,9 @@ public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataIte
     @Override
     public void onDataItemClicked(Data data) {
         DetailActivity.start(getActivity(), data);
+    }
+
+    public static DataPhoneFragment getInstance() {
+        return new DataPhoneFragment();
     }
 }

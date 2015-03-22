@@ -27,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
         DataTabletFragment fragment = (DataTabletFragment) getSupportFragmentManager().findFragmentByTag("tag");
 
         if (fragment == null) {
-            fragment = new DataTabletFragment();
+            fragment = DataTabletFragment.getInstance();
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, fragment, "tag")
                     .commit();
@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         DataPhoneFragment fragment = (DataPhoneFragment) getSupportFragmentManager().findFragmentByTag("tag");
 
         if (fragment == null) {
-            fragment = new DataPhoneFragment();
+            fragment = DataPhoneFragment.getInstance();
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, fragment, "tag")
                     .commit();

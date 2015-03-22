@@ -58,4 +58,8 @@ public class SortByValueFragment extends Fragment {
         adapter.setOnDataItemClicked(mOnDataItemClickedListener);
         mRecyclerView.setAdapter(adapter);
     }
+
+    public static SortByValueFragment getInstance() {
+        return new SortByValueFragment();
+    }
 }
