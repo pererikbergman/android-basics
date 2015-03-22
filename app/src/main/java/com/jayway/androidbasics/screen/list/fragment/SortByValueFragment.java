@@ -13,6 +13,7 @@ import com.jayway.androidbasics.R;
 import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 import com.jayway.androidbasics.model.Data;
 import com.jayway.androidbasics.model.Service;
+import com.jayway.androidbasics.screen.list.viewholder.DataViewHolder;
 import com.jayway.androidbasics.util.DataUtil;
 
 import java.util.ArrayList;
@@ -20,8 +21,8 @@ import java.util.Collections;
 
 public class SortByValueFragment extends Fragment {
 
-    private RecyclerView                          mRecyclerView;
-    private DataAdapter.OnDataItemClickedListener mOnDataItemClickedListener;
+    private RecyclerView                             mRecyclerView;
+    private DataViewHolder.OnDataItemClickedListener mOnDataItemClickedListener;
 
     @Override
     public void onAttach(Activity activity) {
@@ -29,17 +30,17 @@ public class SortByValueFragment extends Fragment {
 
         Fragment fragment = this;
         while (fragment != null && mOnDataItemClickedListener == null) {
-            if (fragment instanceof DataAdapter.OnDataItemClickedListener) {
-                mOnDataItemClickedListener = (DataAdapter.OnDataItemClickedListener) fragment;
+            if (fragment instanceof DataViewHolder.OnDataItemClickedListener) {
+                mOnDataItemClickedListener = (DataViewHolder.OnDataItemClickedListener) fragment;
             } else {
                 fragment = fragment.getParentFragment();
             }
         }
-        if (mOnDataItemClickedListener == null && activity instanceof DataAdapter.OnDataItemClickedListener) {
-            mOnDataItemClickedListener = (DataAdapter.OnDataItemClickedListener) activity;
+        if (mOnDataItemClickedListener == null && activity instanceof DataViewHolder.OnDataItemClickedListener) {
+            mOnDataItemClickedListener = (DataViewHolder.OnDataItemClickedListener) activity;
         }
     }
-    
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

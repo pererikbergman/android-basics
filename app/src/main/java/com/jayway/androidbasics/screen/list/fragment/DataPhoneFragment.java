@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import com.jayway.androidbasics.R;
 import com.jayway.androidbasics.model.Data;
 import com.jayway.androidbasics.screen.detail.DetailActivity;
-import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
+import com.jayway.androidbasics.screen.list.viewholder.DataViewHolder;
 
-public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataItemClickedListener {
+public class DataPhoneFragment extends Fragment implements DataViewHolder.OnDataItemClickedListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 import com.jayway.androidbasics.screen.detail.fragment.DataDetailFragment;
 import com.jayway.androidbasics.model.Data;
+import com.jayway.androidbasics.screen.list.viewholder.DataViewHolder;
 
-public class DataTabletFragment extends Fragment implements DataAdapter.OnDataItemClickedListener {
+public class DataTabletFragment extends Fragment implements DataViewHolder.OnDataItemClickedListener {
 
     public static final String DATA_LIST   = "list";
     public static final String DATA_DETAIL = "detail";
