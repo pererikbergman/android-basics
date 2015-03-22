@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.model.Service;
 import com.jayway.androidbasics.model.Data;
+import com.jayway.androidbasics.model.Service;
+import com.jayway.androidbasics.screen.list.widget.DataView;
 
 public class DataDetailFragment extends Fragment {
 
     private static String DATA_ID = "dataId";
 
-    private TextView mName;
-    private TextView mValue;
-    private TextView mDetails;
-    private Data     mData;
-    private int      mId;
+    private DataView mDataView;
+
+    private Data mData;
+    private int  mId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,9 +30,7 @@ public class DataDetailFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mName = (TextView) view.findViewById(R.id.name);
-        mValue = (TextView) view.findViewById(R.id.value);
-        mDetails = (TextView) view.findViewById(R.id.details);
+        mDataView = (DataView)view.findViewById(R.id.data_view);
 
         parseBundle(
                 savedInstanceState == null ? getArguments() : savedInstanceState
@@ -44,7 +42,7 @@ public class DataDetailFragment extends Fragment {
     }
 
     private void parseBundle(Bundle bundle) {
-        if(bundle!=null){
+        if (bundle != null) {
             mId = bundle.getInt(DATA_ID, -1);
         }
     }
@@ -59,15 +57,13 @@ public class DataDetailFragment extends Fragment {
 
     public void update() {
         if (mData != null) {
-            mName.setText(mData.getName());
-            mValue.setText(Integer.toString(mData.getValue()));
-            mDetails.setText("Details:" + Integer.toString(mData.getValue() / 1000));
+            mDataView.setData(mData);
         }
     }
 
     public static DataDetailFragment getInstance(int id) {
         DataDetailFragment fragment = new DataDetailFragment();
-        Bundle bundle = new Bundle();
+        Bundle             bundle   = new Bundle();
         bundle.putInt(DataDetailFragment.DATA_ID, id);
         fragment.setArguments(bundle);
 
