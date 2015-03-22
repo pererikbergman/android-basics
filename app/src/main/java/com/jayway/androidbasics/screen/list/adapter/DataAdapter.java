@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.adapter;
+package com.jayway.androidbasics.screen.list.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jayway.androidbasics.model.Data;
-import com.jayway.androidbasics.viewholder.DataViewHolder;
+import com.jayway.androidbasics.screen.list.viewholder.DataViewHolder;
 import com.jayway.androidbasics.R;
 
 import java.util.ArrayList;

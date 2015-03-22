@@ -1,10 +1,10 @@
-package com.jayway.androidbasics.activity;
+package com.jayway.androidbasics.screen.detail;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.fragment.DataDetailFragment;
+import com.jayway.androidbasics.screen.detail.fragment.DataDetailFragment;
 
 public class DetailActivity extends ActionBarActivity {
 

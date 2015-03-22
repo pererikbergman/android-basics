@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.fragment;
+package com.jayway.androidbasics.screen.list.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jayway.androidbasics.activity.DetailActivity;
+import com.jayway.androidbasics.screen.detail.DetailActivity;
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.adapter.DataAdapter;
+import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 import com.jayway.androidbasics.model.Data;
 
 public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataItemClickedListener {

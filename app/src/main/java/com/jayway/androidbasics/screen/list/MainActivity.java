@@ -1,11 +1,11 @@
-package com.jayway.androidbasics.activity;
+package com.jayway.androidbasics.screen.list;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.fragment.DataPhoneFragment;
-import com.jayway.androidbasics.fragment.DataTabletFragment;
+import com.jayway.androidbasics.screen.list.fragment.DataPhoneFragment;
+import com.jayway.androidbasics.screen.list.fragment.DataTabletFragment;
 import com.jayway.androidbasics.util.CompatibilityUtil;
 
 

@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.fragment;
+package com.jayway.androidbasics.screen.detail.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.fragment;
+package com.jayway.androidbasics.screen.list.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.adapter.DataListAdapter;
+import com.jayway.androidbasics.screen.list.adapter.DataListAdapter;
 
 public class DataListFragment extends Fragment {
 

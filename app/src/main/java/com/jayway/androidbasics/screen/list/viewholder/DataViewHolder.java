@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.viewholder;
+package com.jayway.androidbasics.screen.list.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

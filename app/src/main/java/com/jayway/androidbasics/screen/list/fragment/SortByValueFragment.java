@@ -1,4 +1,4 @@
-package com.jayway.androidbasics.fragment;
+package com.jayway.androidbasics.screen.list.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.adapter.DataAdapter;
+import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 import com.jayway.androidbasics.model.Data;
 import com.jayway.androidbasics.model.Service;
 import com.jayway.androidbasics.util.DataUtil;
