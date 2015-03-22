@@ -1,16 +1,15 @@
 package com.jayway.androidbasics.screen.list.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jayway.androidbasics.screen.detail.DetailActivity;
 import com.jayway.androidbasics.R;
-import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 import com.jayway.androidbasics.model.Data;
+import com.jayway.androidbasics.screen.detail.DetailActivity;
+import com.jayway.androidbasics.screen.list.adapter.DataAdapter;
 
 public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataItemClickedListener {
 
@@ -39,12 +38,6 @@ public class DataPhoneFragment extends Fragment implements DataAdapter.OnDataIte
 
     @Override
     public void onDataItemClicked(Data data) {
-        System.out.println("data = " + data.getId());
-        Intent myIntent = new Intent(getActivity(), DetailActivity.class);
-        myIntent.putExtra(DetailActivity.DATA_ID, data.getId()); //Optional parameters
-        getActivity().startActivity(myIntent);
+        DetailActivity.start(getActivity(), data);
     }
 }
-
-
-

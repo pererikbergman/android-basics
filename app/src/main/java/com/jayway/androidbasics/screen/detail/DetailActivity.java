@@ -1,14 +1,17 @@
 package com.jayway.androidbasics.screen.detail;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.jayway.androidbasics.R;
+import com.jayway.androidbasics.model.Data;
 import com.jayway.androidbasics.screen.detail.fragment.DataDetailFragment;
 
 public class DetailActivity extends ActionBarActivity {
 
-    public static String DATA_ID = "dataId";
+    private static String DATA_ID = "dataId";
 
     private int                mId;
     private DataDetailFragment mDataDetailFragment;
@@ -43,5 +46,11 @@ public class DetailActivity extends ActionBarActivity {
                     .add(R.id.container, mDataDetailFragment, "tag")
                     .commit();
         }
+    }
+
+    public static void start(Context context, Data data) {
+        Intent myIntent = new Intent(context, DetailActivity.class);
+        myIntent.putExtra(DetailActivity.DATA_ID, data.getId()); //Optional parameters
+        context.startActivity(myIntent);
     }
 }
